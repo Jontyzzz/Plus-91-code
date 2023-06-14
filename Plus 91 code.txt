@@ -1,0 +1,45 @@
+package codes;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Codechef {
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+		try (Scanner scan = new Scanner(System.in)) {
+			int t=scan.nextInt();
+			while(t>0)
+			{
+			    int N=scan.nextInt();
+			    int K=scan.nextInt();  
+			      int[] w=new int[N];
+			    
+			    long s1=0;
+			    long s2=0;
+			    for(int i=0;i<N;i++)
+			    {
+			        w[i]=scan.nextInt();
+			    }
+			    Arrays.sort(w);
+			     int g=Math.min(K,N-K);
+			    for(int i=0;i<g;i++)
+			    {
+			        
+			        s1+=w[i];
+			                
+			    }      
+			    for(int i=g;i<N;i++)
+			    {
+			        
+			        s2+=w[i];
+			        
+			    }
+			    long h=s2-s1;
+			    System.out.println(h);
+			}
+		}
+	}
+
+}
